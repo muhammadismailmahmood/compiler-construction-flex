@@ -1,0 +1,56 @@
+Line 1: KEYWORD → hum
+Line 1: KEYWORD → Function
+Line 1: IDENTIFIER → start
+Line 1: PUNCTUATION → {
+Line 2: IDENTIFIER → output
+Line 2: ERROR → < (invalid token)
+Line 2: ERROR → - (invalid token)
+Line 2: STRING → "Program begins"
+Line 2: PUNCTUATION → ;
+Line 3: IDENTIFIER → input
+Line 3: OPERATOR → ->
+Line 3: IDENTIFIER → x
+Line 3: PUNCTUATION → ;
+Line 4: KEYWORD → LoopKar
+Line 4: ERROR → ( (invalid token)
+Line 4: IDENTIFIER → x
+Line 4: OPERATOR → =
+Line 4: INT → 0
+Line 4: PUNCTUATION → ;
+Line 4: IDENTIFIER → x
+Line 4: ERROR → < (invalid token)
+Line 4: INT → 5
+Line 4: PUNCTUATION → ;
+Line 4: IDENTIFIER → x
+Line 4: OPERATOR → =
+Line 4: IDENTIFIER → x
+Line 4: OPERATOR → +
+Line 4: INT → 1
+Line 4: ERROR → ) (invalid token)
+Line 4: PUNCTUATION → {
+Line 5: KEYWORD → Agar
+Line 5: IDENTIFIER → x
+Line 5: OPERATOR → ==
+Line 5: INT → 3
+Line 5: PUNCTUATION → {
+Line 6: IDENTIFIER → output
+Line 6: ERROR → < (invalid token)
+Line 6: ERROR → - (invalid token)
+Line 6: STRING → "Found 3"
+Line 6: PUNCTUATION → ;
+Line 7: KEYWORD → BreakKar
+Line 7: PUNCTUATION → ;
+Line 8: PUNCTUATION → }
+Line 8: KEYWORD → Wapas
+Line 8: PUNCTUATION → {
+Line 9: IDENTIFIER → output
+Line 9: ERROR → < (invalid token)
+Line 9: ERROR → - (invalid token)
+Line 9: STRING → "Not yet"
+Line 9: PUNCTUATION → ;
+Line 10: PUNCTUATION → }
+Line 11: PUNCTUATION → }
+Line 12: KEYWORD → ReturnKar
+Line 12: INT → 0
+Line 12: PUNCTUATION → ;
+Line 13: PUNCTUATION → }
