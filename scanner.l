@@ -20,34 +20,39 @@ WS         [ \t\r]+
 
 %%
 
-"//".*                     { /* single-line comment */ }
-{WS}                       { /* ignore whitespace */ }
-\n                         { /* count new lines */ }
+"//".* { /* single-line comment */ }
+{WS} { /* ignore whitespace */ }
+\n  { /* count new lines */ }
 
-{STRING}                   { printf("Line %d: STRING → %s\n", yylineno, yytext); }
-{CHAR}                     { printf("Line %d: CHAR → %s\n", yylineno, yytext); }
-{FLOAT}                    { printf("Line %d: FLOAT → %s\n", yylineno, yytext); }
-{INT}                      { printf("Line %d: INT → %s\n", yylineno, yytext); }
+{STRING} { printf("Line %d: STRING → %s\n", yylineno, yytext); }
+{CHAR} { printf("Line %d: CHAR → %s\n", yylineno, yytext); }
+{FLOAT} { printf("Line %d: FLOAT → %s\n", yylineno, yytext); }
+{INT} { printf("Line %d: INT → %s\n", yylineno, yytext); }
 
-{ID}                       {
-                              if (is_keyword(yytext))
-                                  printf("Line %d: KEYWORD → %s\n", yylineno, yytext);
-                              else
-                                  printf("Line %d: IDENTIFIER → %s\n", yylineno, yytext);
-                            }
+{ID} {
+       if (is_keyword(yytext))
+        printf("Line %d: KEYWORD → %s\n", yylineno, yytext);
+        else
+       printf("Line %d: IDENTIFIER → %s\n", yylineno, yytext);
+      }
 
-"="                        { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"=="                       { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"&&"                       { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"->"                       { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"+"                        { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
+"=" { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
+"==" { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
+"&&" { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
+"->" { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
+"+" { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
+"<" { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
+"-" { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
 
-";"                        { printf("Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
-"{"                        { printf("Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
-"}"                        { printf("Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
-"::"                       { printf("Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
+"(" { printf("Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
+")" { printf("Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
+";" { printf("Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
+"{"  { printf("Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
+"}" { printf("Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
+"::" { printf("Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
 
-.                          { printf("Line %d: ERROR → %s (invalid token)\n", yylineno, yytext); }
+
+. { printf("Line %d: ERROR → %s (invalid token)\n", yylineno, yytext); }
 
 %%
 
