@@ -45,8 +45,11 @@ WS         [ \t\r]+
 "barabar"   { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
 "aur"  { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
 "jama"  { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"kamHai"   { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
 "manfi"  { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
+"zarb"  { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
+"taqseem"  { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
+"kamHai"   { printf("Line %d: OPERATOR → %s\n", yylineno, yytext); }
+
 
 "(" { printf("Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
 ")" { printf("Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
