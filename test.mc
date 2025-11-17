@@ -1,4 +1,4 @@
-Khali Function main {
+@Khali Function main {
     
     Adad secret_num rakho 7;
     Adad user_guess rakho 0;
