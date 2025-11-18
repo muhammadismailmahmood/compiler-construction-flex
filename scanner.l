@@ -24,25 +24,25 @@ WS         [ \t\r]+
 {WS}       { }
 \n         { }
 
-"dikhao<-" { fprintf(outfile, "Line %d: KEYWORD → %s\n", yylineno, yytext); }
-"pakro->" { fprintf(outfile, "Line %d: KEYWORD → %s\n", yylineno, yytext); }
+"dikhao<-" { fprintf(outfile, "Line %d: KEYWORD → %s\n", yylineno, yytext); }//cout
+"pakro->" { fprintf(outfile, "Line %d: KEYWORD → %s\n", yylineno, yytext); }//cin
 
-"rakhle" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"sameTOsame" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"jama" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"kaatDo" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"timesKaro" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"baantDo" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"kamHai" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"aur" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }
-"yaaPhir" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }
+"rakhle" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }//=
+"sameTOsame" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }//==
+"jama" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }// +
+"kaatDo" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }// -
+"timesKaro" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }// *
+"baantDo" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }//(divide)
+"kamHai" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }// <
+"aur" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }// AND
+"yaaPhir" { fprintf(outfile, "Line %d: OPERATOR → %s\n", yylineno, yytext); }//OR
 
 "("  { fprintf(outfile, "Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
 ")"  { fprintf(outfile, "Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
 "{"  { fprintf(outfile, "Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
 "}"  { fprintf(outfile, "Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
-";"  { fprintf(outfile, "Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
-"::" { fprintf(outfile, "Line %d: PUNCTUATION → %s\n", yylineno, yytext); }
+"!!" { fprintf(outfile, "Line %d: PUNCTUATION → %s\n", yylineno, yytext); } //Semicolon replacement
+"@"  { fprintf(outfile, "Line %d: PUNCTUATION → %s\n", yylineno, yytext); } // Scope replacement
 
 {STRING}     { fprintf(outfile, "Line %d: STRING → %s\n", yylineno, yytext); }
 {CHAR}       { fprintf(outfile, "Line %d: CHAR → %s\n", yylineno, yytext); }
